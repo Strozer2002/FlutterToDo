@@ -25,18 +25,19 @@ class _HomeState extends State<Home> {
         .push(MaterialPageRoute(builder: (BuildContext context) {
       return Scaffold(
         appBar: AppBar(title: Text("Меню")),
-        body: Row(
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/', (route) => false);
-                },
-                child: Text('На главную')),
-            Padding(padding: EdgeInsets.only(left: 15)),
-            Text("Наше простое меню"),
-          ],
+        body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/', (route) => false);
+                  },
+                  child: Text('На главную')),
+            ],
+          ),
         ),
       );
     }));
